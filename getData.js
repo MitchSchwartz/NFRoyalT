@@ -1,5 +1,5 @@
 
-function getData(_address){
+export default function getData(_address){
     document.getElementById("addressInput").value = toString(_address);
 
     console.log("_addres:",_address); 
