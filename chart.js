@@ -5,7 +5,7 @@ export default function updateChart() {
     
     const ctx = document.getElementById('chart');
     const chart = new Chart(ctx, {
-        type: 'bar',
+        type: 'line',
         data: {
             labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
             datasets: [{
@@ -38,7 +38,7 @@ export default function updateChart() {
             },            
             animations: {
                 tension: {
-                  duration: 1000,
+                  duration: 2000,
                   easing: 'linear',
                   from: 1,
                   to: 0,
