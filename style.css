@@ -1,5 +1,6 @@
 :root {
-  --main-bg-color: #fff;
+  --main-bg-color: #666;
+  --card-bg-color: #dddddd;
   --primary-color: #af79e2;
   --shadow-color: #af79e2cc;
   --body-font: #21252b;
@@ -20,9 +21,10 @@ body {
   min-width: 400px;
   padding: auto, auto;
   align-content: center;
-  margin: 24px;
-  box-shadow: #333 0px 0px 65px;
+  margin: 3vh auto auto auto;
+  box-shadow: #444 0px 0px 300px 50px;
   border-radius: 10px;
+  background-color: var(--card-bg-color,#eee);
 }
 
 #chart{
@@ -38,19 +40,20 @@ input {
     height: 19px;
     display: inline;
     border-radius: 8px 0 0 8px;
-    text-align: center;
+    /* text-align: center; */
     width: 300px;
     border: var(--shadow-color, #af79e2cc) 1px solid;
     -moz-box-shadow:    0px 0px 3px  #af79e2cc;
     -webkit-box-shadow: 0px 0px 3px  #af79e2cc;
     box-shadow:         0px 0px 3px 1px var(--primary-color, #af79e2);
+    background-color: var(--card-bg-color,#ddd);
   }
   
 
   button{
     display: inline;
     border-radius: 0 8px 8px 0;
-    background-color: var(--main-bg-color, #fff);
+    background-color: var(--primary-color, #fff);
     border: var(--shadow-color, #af79e2cc) 1px solid;
     -moz-box-shadow:    0px 0px 3px  #af79e2cc;
     -webkit-box-shadow: 0px 0px 3px  #af79e2cc;
