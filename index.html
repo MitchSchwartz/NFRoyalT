@@ -1,97 +1,167 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>NFRoyalT</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-  </head>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+</head>
 
-  <body>
+<body>
     <div id="outterDiv">
 
-      <div id="mainInputDiv">
-    
-          <div id="mainInputDiv">
-              <h1 style="margin-bottom: -60px" class="textShadow">👑</h1><br />
-              <h1 class="textShadow">NF<i style="font-size: .8em;">Royal</i>T</h1><br />
-              
-      
-              <div class = "inputDiv">
-                    
-                <div class>
-                    <label for="addressInput">Contract Address 👇🏽</label>
+        <div class=".centeredDiv">
+
+            <div id="mainInputDiv">
+                <h1 style="margin-bottom: -60px" class="textShadow">👑</h1><br />
+                <h1 class="textShadow">NF<i style="font-size: .8em;">Royal</i>T</h1><br />
+
+
+                <div class="inputDiv">
+
+                    <div class>
+                        <label for="addressInput">Contract Address 👇🏽</label>
+                    </div>
+                    <div style="white-space:nowrap">
+                        <input type="text" id="addressInput"></input>
+                        <button id="getButton">Get!</button>
+                    </div>
+
                 </div>
-                <div style="white-space:nowrap">
-                    <input type="text" id="addressInput"></input>
-                    <button id="getButton">Get!</button>
-                </div>                  
-              
-          </div>
 
 
-          <div id ="walletList">
-              
-          </div>
+                <div id="walletList">
 
-          
-          
-  <!--   Charts.js | https://www.chartjs.org/docs/latest/getting-started/ -->
+                </div>
 
-          <div ID="chartDiv">
-              <canvas id="chart" width="80%" height="auto"></canvas>
-          </div>
-    
-    
-    
-    
-      </div>
-    </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    
-    <script>
 
-      
-      const ctx = document.getElementById('chart').getContext('2d');
-      const myChart = new Chart(ctx, {
-          type: 'bar',
-          data: {
-              labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-              datasets: [{
-                  label: '# of Votes',
-                  data: [12, 19, 3, 5, 2, 3],
-                  backgroundColor: [
-                      'rgba(255, 99, 132, 0.2)',
-                      'rgba(54, 162, 235, 0.2)',
-                      'rgba(255, 206, 86, 0.2)',
-                      'rgba(75, 192, 192, 0.2)',
-                      'rgba(153, 102, 255, 0.2)',
-                      'rgba(255, 159, 64, 0.2)'
-                  ],
-                  borderColor: [
-                      'rgba(255, 99, 132, 1)',
-                      'rgba(54, 162, 235, 1)',
-                      'rgba(255, 206, 86, 1)',
-                      'rgba(75, 192, 192, 1)',
-                      'rgba(153, 102, 255, 1)',
-                      'rgba(255, 159, 64, 1)'
-                  ],
-                  borderWidth: 1
-              }]
-          },
-          options: {
-              scales: {
-                  y: {
-                      beginAtZero: true
-                  }
-              }
-          }
-      });
-      </script>
 
-    <script type="module" src="chart.js"></script>
-    <script type="module" src="getData.js"></script>
-    <script type="module" src="script.js"></script>
-  </body>
+
+                <div ID="chartDiv">
+                    <canvas id="chart" width="80%" height="auto"></canvas>
+                    <table id="royaltyTable" class="display" style="padding-bottom: 50px;">
+                        <thead>
+                            <tr>
+                                <th>Wallet Address</th>
+                                <th>Royalty (%)</th>
+                                <th>Royalty ($)</th>
+                                <th>Royalty (Eth)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>0xedkuhwf978h9f7b9a30d1710edfc4820e9f899dd</td>
+                                <td>10%</td>
+                                <td>40,000</td>
+                                <td>12</td>
+
+
+                            </tr>
+                            <tr>
+                                <td>0xe9o9kc66e2oun23C3v97hvrveouhvciw7hv97h3r</td>
+                                <td>7.5%</td>
+                                <td>30,000</td>
+                                <td>9</td>
+                            </tr>
+                            <tr>
+                                <td>0xn03rugnh3ourhg937uhgughjfhdjhw9j2w2h7fhf</td>
+                                <td>5%</td>
+                                <td>20,000</td>
+                                <td>6</td>
+                            </tr>
+                            <tr>
+                                <td>0xonvou3n9v7n39onu34iy3vnknhhndjwjskljfa92r</td>
+                                <td>15%</td>
+                                <td>60,000</td>
+                                <td>18</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+
+
+                <div>
+
+
+
+                </div>
+
+
+
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+        <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+        <script>
+            //   Charts.js | https://www.chartjs.org/docs/latest/getting-started/
+
+            const ctx = document.getElementById('chart').getContext('2d');
+            const myChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 21, 32],
+                        backgroundColor: [
+                            'rgba(255, 99, 132, 0.2)',
+                            'rgba(54, 162, 235, 0.2)',
+                            'rgba(255, 206, 86, 0.2)',
+                            'rgba(75, 192, 192, 0.2)',
+                            'rgba(153, 102, 255, 0.2)',
+                            'rgba(255, 159, 64, 0.2)'
+                        ],
+                        borderColor: [
+                            'rgba(255, 99, 132, 1)',
+                            'rgba(54, 162, 235, 1)',
+                            'rgba(255, 206, 86, 1)',
+                            'rgba(75, 192, 192, 1)',
+                            'rgba(153, 102, 255, 1)',
+                            'rgba(255, 159, 64, 1)'
+                        ],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            //table styling
+            // $('#royaltyTable').dataTable({
+            //     // "columnDefs": [
+            //     //     { className: "display", "targets": [0] }
+            //     // ],
+            //     "columns": [
+            //         { className: "leftAlign" },
+            //         null,
+            //         null,
+            //         null,
+            //         null
+            //     ]
+            // });
+            
+
+        </script>
+
+
+
+
+        <!-- <script type="module" src="chart.js"></script> -->
+        <script type="module" src="getData.js"></script>
+        <script type="module" src="app.js"></script>
+</body>
+
 </html>

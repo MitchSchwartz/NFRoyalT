@@ -17,7 +17,7 @@ body {
 
 
 #outterDiv {
-  max-width: 1280px;
+  max-width: 860px;
   min-width: 400px;
   padding: auto, auto;
   align-content: center;
@@ -47,69 +47,79 @@ input {
     -webkit-box-shadow: 0px 0px 3px  #af79e2cc;
     box-shadow:         0px 0px 3px 1px var(--primary-color, #af79e2);
     background-color: var(--card-bg-color,#ddd);
-  }
+}
   
 
-  button{
-    display: inline;
-    border-radius: 0 8px 8px 0;
-    background-color: var(--primary-color, #fff);
-    border: var(--shadow-color, #af79e2cc) 1px solid;
-    -moz-box-shadow:    0px 0px 3px  #af79e2cc;
-    -webkit-box-shadow: 0px 0px 3px  #af79e2cc;
-    box-shadow:         0px 0px 3px 1px var(--primary-color, #af79e2);
-    /* color: var(--body-font, #eee); */
-    padding: 10px;
-    height: 40px;
-    width: 80px;
-    margin-left: -2px;
-    font-weight: bold;
-  }
+button{
+  display: inline;
+  border-radius: 0 8px 8px 0;
+  background-color: var(--primary-color, #fff);
+  border: var(--shadow-color, #af79e2cc) 1px solid;
+  -moz-box-shadow:    0px 0px 3px  #af79e2cc;
+  -webkit-box-shadow: 0px 0px 3px  #af79e2cc;
+  box-shadow:         0px 0px 3px 1px var(--primary-color, #af79e2);
+  /* color: var(--body-font, #eee); */
+  padding: 10px;
+  height: 40px;
+  width: 80px;
+  margin-left: -2px;
+  font-weight: bold;
+}
   
-  label{
-    margin : auto auto -10px auto;
-    padding : 10px;
-    display: block;
-    border-radius: 8px;
-    text-align: left;
-    width: 100%;
-  }
+label{
+  margin : auto auto -10px auto;
+  padding : 10px;
+  display: block;
+  border-radius: 8px;
+  text-align: left;
+  width: 100%;
+}
+
+.inlineLabel{
+  display: inline-block;
+  width: auto; 
+}
+
+.inlineDiv{
+  display: inline;
+  width: auto;
+}
+
+.centeredDiv{
+  /* max-width : 400px;  */
+  margin: auto;
+  text-align: center;
+}
+
+.inputDiv{
+  width: 380px;
+  margin: auto;
+}
+
+.shadow{
+  -moz-box-shadow:    0px 0px 3px  var(--primary-color, #af79e2cc);
+  -webkit-box-shadow: 0px 0px 3px  var(--primary-color, #af79e2cc);
+  box-shadow:         0px 0px 2px 1px var(--primary-color, #af79e2cc);
+}
+
+.textShadow{
+  text-shadow: 0px 0px 2px var(--shadow-color, #af79e2aa);
+}
+
+h1 {
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px;
+}
+
   
-  .inlineLabel{
-    display: inline-block;
-    width: auto; 
-  }
-  
-  .inlineDiv{
-    display: inline;
-    width: auto;
-  }
+.display{
+  width: 100%;
+  text-align: center;
+  padding: 3vw 5vw;
+  max-width: 100%;
+}
 
-  #mainInputDiv{
-    /* max-width : 400px;  */
-    margin: auto;
-    text-align: center;
-  }
-
-  .inputDiv{
-    width: 380px;
-    margin: auto;
-  }
-
-  .shadow{
-    -moz-box-shadow:    0px 0px 3px  var(--primary-color, #af79e2cc);
-    -webkit-box-shadow: 0px 0px 3px  var(--primary-color, #af79e2cc);
-    box-shadow:         0px 0px 2px 1px var(--primary-color, #af79e2cc);
-  }
-
-  .textShadow{
-    text-shadow: 0px 0px 2px var(--shadow-color, #af79e2aa);
-  }
-  
-  h1 {
-    margin: 0 auto;
-    text-align: center;
-    padding: 20px;
-  }
-
-  
+.leftAlign{
+  text-align: left;
+}
