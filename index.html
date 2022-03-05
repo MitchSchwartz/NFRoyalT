@@ -13,6 +13,7 @@
     <div id="outterDiv">
 
         <div class=".centeredDiv">
+            
 
             <div id="mainInputDiv">
                 <h1 style="margin-bottom: -60px" class="textShadow">👑</h1><br />
@@ -30,34 +31,44 @@
                     </div>
                 </div>
 
-                <div class="row">
+                
+
+                <label class="collectionInfo" style="margin-top:20px"><h2>Collection Name</h2></label> 
+
+                <div class="row" style="margin-top: 0px;" >
                     <div class="column" style="min-width: 25%;">
-                        <label class="collectionInfo">Collection Name: 
+
                             <span id="collectionName" class="collectionMeta"></span>
                         </label>
-                        <label class="collectionInfo">Ticker: 
+                        </br>
+
+                        <div
+                            style="border-radius:4px; background-color:#ccccccaa; max-width:85%; margin: 6px auto; text-align:left; margin-top:-10px">
+                            <label class="collectionInfoDiv"><strong>Total Royalties</strong></label>
+                            <label class="collectionInfoDiv">ETC </label>
+                            <label class="collectionInfoDiv">USD </label>
+                        </div>
+                        </br>
+
+
+
+                        <label class="collectionInfo">Ticker 
                             <span id="ticker" class="collectionMeta"></span>
                         </label>
-                        <label class="collectionInfo" >Floor Price: 
+                        <label class="collectionInfo" >Floor Price 
                             <span id="floorPrice" class="collectionMeta"></span>
                         </label> 
                         
                         
-                        <label class="collectionInfo">Average Price: </label>
-                        <label class="collectionInfo">Current Ceiling: </label>
-                        <label class="collectionInfo">Blockchain Id: 
+                        <label class="collectionInfo">Average Price </label>
+                        <label class="collectionInfo">Current Ceiling </label>
+                        <label class="collectionInfo">Blockchain Id 
                             <span id="blockchainId" class="collectionMeta"></span>
                         </label>
 
-                        <div
-                            style="border-radius:4px; background-color:#ccc; max-width:85%; margin: 6px auto; text-align:left;">
-                            <label class="collectionInfoDiv">Total Royalties </label>
-                            <label class="collectionInfoDiv">ETC: </label>
-                            <label class="collectionInfoDiv">USD: </label>
-                        </div>
-                        </br>
-                        <label class="collectionInfo">Total Holders: </label>
-                        <label class="collectionInfo">Total Resales: </label>
+                        
+                        <label class="collectionInfo">Total Holders </label>
+                        <label class="collectionInfo">Total Resales </label>
 
                     </div>
                     <div class="column" style="width:100%">
@@ -75,7 +86,7 @@
 
                 <div display = "block">
 
-                    <table id="royaltyTable" class="display" style="padding-bottom: 50px;">
+                    <table id="royaltyTable" class="display" style="padding-bottom: 50px; padding-right: 80px;">
                           <thead>
                               <tr>
                                   <th>Wallet Address</th>
