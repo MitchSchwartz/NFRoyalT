@@ -31,18 +31,26 @@
                 </div>
 
                 <div class="row">
-                    <div class="column">
-                        <label class="collectionInfo">Collection Name: </label>
-                        <label class="collectionInfo">Ticker: </label>
-                        <label class="collectionInfo">Floor Price: </label>
+                    <div class="column" style="min-width: 25%;">
+                        <label class="collectionInfo">Collection Name: 
+                            <span id="collectionName" class="collectionMeta"></span>
+                        </label>
+                        <label class="collectionInfo">Ticker: 
+                            <span id="ticker" class="collectionMeta"></span>
+                        </label>
+                        <label class="collectionInfo" >Floor Price: 
+                            <span id="floorPrice" class="collectionMeta"></span>
+                        </label> 
+                        
+                        
                         <label class="collectionInfo">Average Price: </label>
                         <label class="collectionInfo">Current Ceiling: </label>
-                        <label class="collectionInfo">Blockchain: </label>
+                        <label class="collectionInfo">Blockchain Id: 
+                            <span id="blockchainId" class="collectionMeta"></span>
+                        </label>
 
-                    </div>
-                    <div class="column">
                         <div
-                            style="border-radius:4px; background-color:#ccc; max-width:45%; margin: 6px auto; text-align:left;">
+                            style="border-radius:4px; background-color:#ccc; max-width:85%; margin: 6px auto; text-align:left;">
                             <label class="collectionInfoDiv">Total Royalties </label>
                             <label class="collectionInfoDiv">ETC: </label>
                             <label class="collectionInfoDiv">USD: </label>
@@ -52,63 +60,70 @@
                         <label class="collectionInfo">Total Resales: </label>
 
                     </div>
+                    <div class="column" style="width:100%">
+                        <div ID="chartDiv">
+                            <div max-width="1280px">
+                                <canvas id="chart" width="80%" height="auto"></canvas>
+                            </div>
+                        </div>                       
+
+                    </div>
+
+      
+
                 </div>
 
-                <div ID="chartDiv">
-                    <canvas id="chart" width="80%" height="auto"></canvas>
+                <div display = "block">
+
                     <table id="royaltyTable" class="display" style="padding-bottom: 50px;">
-                        <thead>
-                            <tr>
-                                <th>Wallet Address</th>
-                                <th>Royalty (%)</th>
-                                <th>Royalty ($)</th>
-                                <th>Royalty (Eth)</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>0xedkuhwf978h9f7b9a30d1710edfc4820e9f899dd</td>
-                                <td>10%</td>
-                                <td>40,000</td>
-                                <td>12</td>
+                          <thead>
+                              <tr>
+                                  <th>Wallet Address</th>
+                                  <th>Royalty (%)</th>
+                                  <th>Royalty ($)</th>
+                                  <th>Royalty (Eth)</th>
+                              </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td>0xedkuhwf978h9f7b9a30d1710edfc4820e9f899dd</td>
+                                  <td>10%</td>
+                                  <td>40,000</td>
+                                  <td>12</td>
+  
+  
+                              </tr>
+                              <tr>
+                                  <td>0xe9o9kc66e2oun23C3v97hvrveouhvciw7hv97h3r</td>
+                                  <td>7.5%</td>
+                                  <td>30,000</td>
+                                  <td>9</td>
+                              </tr>
+                              <tr>
+                                  <td>0xn03rugnh3ourhg937uhgughjfhdjhw9j2w2h7fhf</td>
+                                  <td>5%</td>
+                                  <td>20,000</td>
+                                  <td>6</td>
+                              </tr>
+                              <tr>
+                                  <td>0xonvou3n9v7n39onu34iy3vnknhhndjwjskljfa92r</td>
+                                  <td>15%</td>
+                                  <td>60,000</td>
+                                  <td>18</td>
+                              </tr>
+                          </tbody>
+                      </table>
 
 
-                            </tr>
-                            <tr>
-                                <td>0xe9o9kc66e2oun23C3v97hvrveouhvciw7hv97h3r</td>
-                                <td>7.5%</td>
-                                <td>30,000</td>
-                                <td>9</td>
-                            </tr>
-                            <tr>
-                                <td>0xn03rugnh3ourhg937uhgughjfhdjhw9j2w2h7fhf</td>
-                                <td>5%</td>
-                                <td>20,000</td>
-                                <td>6</td>
-                            </tr>
-                            <tr>
-                                <td>0xonvou3n9v7n39onu34iy3vnknhhndjwjskljfa92r</td>
-                                <td>15%</td>
-                                <td>60,000</td>
-                                <td>18</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
+              </div>
+                
 
-
-
-
-                <div>
-
-
-
-                </div>
 
 
 
             </div>
         </div>
+        <script src="easyhttp3.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"
             integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
@@ -179,8 +194,8 @@
 
 
         <!-- <script type="module" src="chart.js"></script> -->
-        <script type="module" src="getData.js"></script>
-        <script type="module" src="app.js"></script>
+        <script src="getData.js"></script>
+        <script type="text/javascript" src="app.js"></script>
 </body>
 
 </html>
