@@ -22,23 +22,37 @@
                 <div class="inputDiv">
 
                     <div class>
-                        <label for="addressInput">Contract Address 👇🏽</label>
+                        <label for="addressInput" class="inputLabel">Contract Address 👇🏽</label>
                     </div>
                     <div style="white-space:nowrap">
                         <input type="text" id="addressInput"></input>
                         <button id="getButton">Get!</button>
                     </div>
-
                 </div>
 
+                <div class="row">
+                    <div class="column">
+                        <label class="collectionInfo">Collection Name: </label>
+                        <label class="collectionInfo">Ticker: </label>
+                        <label class="collectionInfo">Floor Price: </label>
+                        <label class="collectionInfo">Average Price: </label>
+                        <label class="collectionInfo">Current Ceiling: </label>
+                        <label class="collectionInfo">Blockchain: </label>
 
-                <div id="walletList">
+                    </div>
+                    <div class="column">
+                        <div
+                            style="border-radius:4px; background-color:#ccc; max-width:45%; margin: 6px auto; text-align:left;">
+                            <label class="collectionInfoDiv">Total Royalties </label>
+                            <label class="collectionInfoDiv">ETC: </label>
+                            <label class="collectionInfoDiv">USD: </label>
+                        </div>
+                        </br>
+                        <label class="collectionInfo">Total Holders: </label>
+                        <label class="collectionInfo">Total Resales: </label>
 
+                    </div>
                 </div>
-
-
-
-
 
                 <div ID="chartDiv">
                     <canvas id="chart" width="80%" height="auto"></canvas>
@@ -135,6 +149,11 @@
                         y: {
                             beginAtZero: true
                         }
+                    },
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
                     }
                 }
             });
@@ -152,7 +171,7 @@
             //         null
             //     ]
             // });
-            
+
 
         </script>
 

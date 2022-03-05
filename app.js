@@ -1,8 +1,8 @@
-// import * as getData from './getData'; //exported instead
+import * as getData from './getData'; //exported instead
 
 function primeGetData(){
     console.log("hi");
-    var x = document.getElementById('addressInput');
+    var x = document.getElementById('addressInput').value;
     getData(x);
 
 }

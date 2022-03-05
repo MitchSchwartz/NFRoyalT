@@ -18,7 +18,7 @@ body {
 
 #outterDiv {
   max-width: 860px;
-  min-width: 400px;
+  min-width: 480px;
   padding: auto, auto;
   align-content: center;
   margin: 3vh auto auto auto;
@@ -31,7 +31,34 @@ body {
   max-width: 1280px;
   min-width: 400px;
   max-height: 50vh;
-  padding: 50px;
+  padding: 0px 50px 20px 50px;
+}
+
+  
+.display{
+  width: 100%;
+  text-align: center;
+  padding: 2vw 5vw 3vw;
+  max-width: 100%;
+}
+
+.leftAlign{
+  text-align: left;
+}
+
+.row {
+  display: flex;
+  margin: 50px auto;
+  max-width: 720px;
+
+}
+
+.collectionInfo{
+  max-width: 40%;
+}
+
+.column {
+  flex: 50%;
 }
 
 input {
@@ -71,8 +98,11 @@ label{
   padding : 10px;
   display: block;
   border-radius: 8px;
-  text-align: left;
   width: 100%;
+}
+
+.inputLabel{
+text-align: left;
 }
 
 .inlineLabel{
@@ -106,20 +136,9 @@ label{
   text-shadow: 0px 0px 2px var(--shadow-color, #af79e2aa);
 }
 
-h1 {
+h1{
   margin: 0 auto;
   text-align: center;
   padding: 20px;
 }
 
-  
-.display{
-  width: 100%;
-  text-align: center;
-  padding: 3vw 5vw;
-  max-width: 100%;
-}
-
-.leftAlign{
-  text-align: left;
-}
