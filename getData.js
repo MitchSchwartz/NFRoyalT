@@ -28,7 +28,7 @@ function getData(){
     .then(res =>{
       const data = res.data.items[0];
       console.log(data);
-      document.getElementById("collectionName").innerText = data.collection_name;
+      document.getElementById("CollectionName").innerHTML = data.collection_name;
       document.getElementById("ticker").innerText = data.collection_ticker_symbol;
       document.getElementById("floorPrice").innerText = data.floor_price_quote_7d;
       document.getElementById("blockchainId").innerText = data.chain_id;
